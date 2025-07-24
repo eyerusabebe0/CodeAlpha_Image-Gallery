@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  background-color: white;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:blue; 
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  color: #5a5a5a; 
+  letter-spacing: 1px;
+}
+
+
+.container {
+  max-width: 620px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  background-color: rgb(208, 224, 114); 
+  border-radius: 15px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.nav-btn {
+  background-color: #f0f0f0;
+  border: none;
+  font-size: 2.5rem;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #6a6a6a;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.nav-btn:hover,
+.nav-btn:focus {
+  background-color: #e0e0e0;
+  color: #3a3a3a;
+  outline: none;
+  transform: scale(1.15);
+}
+
+
+#mainImage {
+  width: 100%;           
+  max-width: 600px;      
+  height: 400px;         
+  object-fit: cover;     
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.contain {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contain img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+
+.contain img.active {
+  opacity: 1;
+  border: 2px solid #00ffcc;
+}
+
+
+.contain img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+
+
+@media (max-width: 720px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #mainImage {
+    max-width: 100%;
+  }
+
+  .nav-btn {
+    font-size: 2rem;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .contain img {
+    width: 80px;
+    height: 55px;
+  }
+}
